@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<title>Kovovy srot - Moravsky Svaty Jan</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+nav {
+    background-color: #1b5e20;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+section {
+    padding: 20px;
+    display: none;
+}
+section.active {
+    display: block;
+}
+img {
+    max-width: 100%;
+}
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>Spracovanie kovoveho odpadu</h1>
+<p>Obec Moravsky Svaty Jan</p>
+</header>
+
+<nav>
+<a href="#" onclick="showPage('uvod')">Uvod</a>
+<a href="#" onclick="showPage('obec')">Obec</a>
+<a href="#" onclick="showPage('kov')">Kovovy srot</a>
+<a href="#" onclick="showPage('triedenie')">Triedenie</a>
+<a href="#" onclick="showPage('statistika')">Statistika</a>
+<a href="#" onclick="showPage('kontakt')">Kontakt</a>
+<a href="#" onclick="showPage('zdroje')">Zdroje</a>
+</nav>
+
+<section id="uvod" class="active">
+<h2>Uvod</h2>
+<p>Tato webova stranka sa zaobera spracovanim kovoveho odpadu v obci Moravsky Svaty Jan.</p>
+<p>Kovovy odpad je dolezity, pretoze sa da opakovane recyklovat.</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Scrap_metal.jpg">
+</section>
+
+<section id="obec">
+<h2>Obec Moravsky Svaty Jan</h2>
+<p>Okres Senica, Trnavsky kraj.</p>
+<p>Pocet obyvatelov: cca 2100.</p>
+<p>Obec zabezpecuje triedeny zber odpadu.</p>
+</section>
+
+<section id="kov">
+<h2>Kovovy odpad</h2>
+<ul>
+<li>plechovky</li>
+<li>zelezo</li>
+<li>kovove casti</li>
+</ul>
+
+<p>Kovy sa daju recyklovat takmer 100%.</p>
+<p>Recyklaciou vznikaju nove vyrobky (napr. plechovky, suciastky).</p>
+</section>
+
+<section id="triedenie">
+<h2>Triedenie odpadu</h2>
+<p>Obcania triedia:</p>
+<ul>
+<li>plast</li>
+<li>papier</li>
+<li>sklo</li>
+<li>kov</li>
+</ul>
+
+<p>Zber zabezpecuje FCC Slovensko.</p>
+</section>
+
+<section id="statistika">
+<h2>Statistika odpadu</h2>
+<p>Priemer na obyvatela: cca 420 kg odpadu rocne.</p>
+<p>Z toho kovovy odpad tvori mensiu cast (niekolko kg na osobu).</p>
+<p>Velka cast kovu sa recykluje.</p>
+</section>
+
+<section id="kontakt">
+<h2>Kontakt</h2>
+<p>Email: obec@moravskysvatyjan.sk</p>
+<p>Telefon: 034 / 777 01 21</p>
+<p>Adresa: Obecny urad Moravsky Svaty Jan</p>
+</section>
+
+<section id="zdroje">
+<h2>Zdroje</h2>
+<p><a href="https://www.moravskysvatyjan.sk" target="_blank">Oficialna stranka obce</a></p>
+<p><a href="https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/79/" target="_blank">Zakon o odpadoch</a></p>
+</section>
+
+<footer>
+<p>Autor: Kevin Blazek</p>
+<p>Spoluautor: Richard Kopiar, Marek Smolinsky</p>
+</footer>
+
+<script>
+function showPage(pageId) {
+    let sections = document.querySelectorAll("section");
+    sections.forEach(section => section.classList.remove("active"));
+    document.getElementById(pageId).classList.add("active");
+}
+</script>
+
+</body>
+</html>
